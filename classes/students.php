@@ -93,6 +93,8 @@
 			} return $diff;
 		 }
 
+		 // Skulle denne vært i en annen klasse kanskje? Ser for meg en klass som kan
+		 // fikse all lagring til csv, det være studenter, courses eller andre ting. Fix at will.
 		 public function addNewStudentsToExistingCsv ($newStudents) {
 			if(empty($newStudents)){
 				echo "<script type='text/javascript'>alert('No new students added');</script>";
