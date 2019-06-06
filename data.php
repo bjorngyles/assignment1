@@ -136,6 +136,8 @@ if (isset($_POST["submit"])){
   }
 
   function CompareNewAndExistingStudentInCourses($existingStudentInCourses, $newStudentInCourses){
+    // *******
+    // Flytt alt dette til kallende funksjon i stedet, det er tydeligere
     // Compare New and existing Student in courses
     $NewStudentInCoursesWithoutDuplicates = StudentInCourses::CompareNewAndExistingStudentInCourses($existingStudentInCourses, $newStudentInCourses);
     
@@ -145,7 +147,8 @@ if (isset($_POST["submit"])){
   function addNewStudentInCourses($newStudentInCourses){
     StudentInCourses::addNewStudInCoursesToExistingCsv($newStudentInCourses);
   }
-  createStudentsTable();
+ // Denne burde kanksje komme rett etter parsingen i hovedfunksjonen? Da blir det litt tydeligere hva som skjer. 
+createStudentsTable();
 
   Function createStudentsTable(){
     $existingStudents = Students::FetchExistingStudentData();
