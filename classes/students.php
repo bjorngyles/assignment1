@@ -99,84 +99,16 @@
 			} else {
 				$fp = fopen('./data/student.csv', 'a');
 				foreach ($newStudents as $fields) {
-				  if( is_object($fields) )
+				  if( is_object($fields) ) {
 				  $fields = (array) $fields;
-			  fputcsv($fp, $fields);
+				  fputcsv($fp, $fields);
 				  }
+
 				  fclose($fp);
 				  $counter = count($newStudents);
 				  echo "<script type='text/javascript'>alert('$counter new students added');</script>";
+				}
 			}
-
-		 public function calculateGpa(){
-
 		 }
-		 public function countFailedAndSucceededCourses(){
-			 
-		 }
-		}
-	 }
-
-
-
-
-
-
-	 
-
-// 	 function studentArr_mapper($studentArr){
-// 		$csvStud = array_map('str_getcsv', file('data/student.csv'));
-// 	   // $csvCourse = array_map('str_getcsv', file('data/courses.csv'));
-// 	   // $csvStudCourse = array_map('str_getcsv', file('data/studcourse.csv'));
-// 	   // var_dump($csvStud);
-// 		   echo "<pre>";
-// 		   var_dump($csvStud);
-// 		   echo "</pre>";
-   
-// 	   $j = 0;
-// 	   foreach ($csvStud as $key => $value) {
-// 		 $existing[$j] = new Student($value[0], $value[1], $value[2], $value[3]);
-// 		 $j++;
-// 		}
-   
-// 	   $i = 0;
-// 	   foreach ($studentArr as $key => $value) {
-// 		$student[$i] = new Student($value[0], $value[1], $value[2], $value[3]);
-// 		$i++;
-// 	   }
-	   
-// 	   studentToArray($student, $existing);
-// 	 }
-
-// 	function studentToArray($student, $existing){
-// 		$resultStud = array();
-// 		$resultExist = array();
-// 		foreach ($student as $object)
-// 		{
-// 			$resultStud[] = (array) $object;
-// 		}
-
-// 		foreach ($existing as $object)
-// 		{
-// 			$resultExist[] = (array) $object;
-// 		}
-// 		studentCompare($resultStud, $resultExist);
-// 	}
-
-// 	function studentCompare($student, $existing){
-// 		$studDiff = array_map('unserialize',
-// 		array_diff(array_map('serialize', $student), 
-// 		array_map('serialize', $existing)));
-		
-// 		echo "<pre>";
-// 		var_dump($studDiff);
-// 		echo "</pre>";
-
-//   	 	if (empty($studDiff)){
-// 			   echo "<script type='text/javascript'>alert('No new students added');</script>";
-// 			} else {
-// 				echo "<script type='text/javascript'>alert('Added a new student');</script>";
-// 				csvWriter($studDiff, 'data/student.csv');
-// 			}
-// 		}
-// ?>
+	}
+?>
