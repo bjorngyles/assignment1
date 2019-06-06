@@ -80,6 +80,10 @@
 			} return $diff;
 		 }
 
+		// Samme kommentar som i Students. Denne hadde nok gjort seg bedre i en klasse sammen med de andre
+		// også har du nok kunnet laget denne mye mer generisk som kan ta inn enten studenter, kurs eller hva
+		// det måtte være. Det er veldig lite som skiller disse tre funksjonene.
+		// Duplikat kode er en no-no i prog-verdnen :)
 		 public function addNewStudInCoursesToExistingCsv ($newStudentInCourses) {
 			if(empty($newStudentInCourses)){
 				echo "<script type='text/javascript'>alert('No new courses added');</script>";
