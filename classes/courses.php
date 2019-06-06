@@ -87,6 +87,7 @@
 			} return $diff;
 		 }
 
+		// Samme som jeg kommenterte i Students-klassen, fix at will.
 		 public function addNewCoursesToExistingCsv ($newCourses) {
 			if(empty($newCourses)){
 				echo "<script type='text/javascript'>alert('No new courses added');</script>";
