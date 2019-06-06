@@ -73,9 +73,13 @@ if (isset($_POST["submit"])){
   }
  
   function CompareNewAndExistingStudents($existingStudents, $newStudents){
+    // *******
+    // Flytt dette alt dette til kallende funksjon i stedet, det er tydeligere
     $NewStudentsWithoutDuplicates = Students::CompareNewAndExistingStudents($existingStudents, $newStudents);
 
     addNewStudent($NewStudentsWithoutDuplicates);
+    // Flytt dette
+    // ******
   }
   
   function addNewStudent($newStudents){
@@ -103,6 +107,7 @@ if (isset($_POST["submit"])){
   }
 
   function CompareNewAndExistingCourses($existingCourses, $newCourses){
+    // **** Samme her Flytt alt innholdet i denne funksjonen til kallende funksjon, det er tydeligere.
     // Compare New and existing courses
     $NewCoursesWithoutDuplicates = Courses::CompareNewAndExistingCourses($existingCourses, $newCourses);
     
